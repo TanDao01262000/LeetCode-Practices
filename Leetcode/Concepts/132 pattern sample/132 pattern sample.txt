@@ -1,8 +1,0 @@
-5 4 1 7 2
-
-
-1st - 5, stack: [5, 5], min=5
-2nd - 4, stack: [5, 5], [4, 5], min=4
-3rd - 1, stack: [5, 5], [4, 5], [1, 4], min=1
-4th - 7, stack: [7,1], min=1
-5th - 2 , stack:[7, 1] 
