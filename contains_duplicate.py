@@ -10,7 +10,7 @@ def containduplicate1(self, nums: List[int]) -> bool:
     hashset = set()  # set
     for n in nums:
         if n in hashset:
-            return True
+            return True 
         else:
             hashset.add(n)
     return False
