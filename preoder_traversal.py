@@ -7,7 +7,7 @@
 class Solution:
 
     # Solution 1: using recursion to solve, O(n) time and space
-    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> list[int]:
         if not root:
             return root
         res = [root.val]
@@ -19,7 +19,7 @@ class Solution:
         return res
 
 # or
-    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> list[int]:
         if root is None:
             return []
         res = []
@@ -30,7 +30,7 @@ class Solution:
     
 
     # Solution 2: iterative using stack, O(n) for both
-    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> list[int]:
         
         res =[]
         if root:
