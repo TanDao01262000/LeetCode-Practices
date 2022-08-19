@@ -7,21 +7,21 @@
 class Solution:
     # Solution 1: Using the BFS algorithm on the tree - O(n) runtime complexity, 
     # O(n) space complexity (implement of queue)
-    def level_order_traversal(self, root: TreeNode) -> list[list[int]]:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         res = []
-        q = Collection.deque()
-        q.append(root)
+        if not root:
+            return res
+        
+        q = [root]
         while q:
-            qlen = len(q)
-            level = []
-            for i in range(qlen):
-                node = q.popLeft()
-                if node:
-                    level.append(node.val)
-                    if node.left:
-                        q.append(node.left)
-                    if node.right:         
-                        q.append(node.right)   
-            if level:
-                res.append(level)
-        return res      
+            temp = []
+            for _ in range(len(q)):
+                cur = q.pop(0)
+                if cur.left:
+                    q.append(cur.left)
+                if cur.right:
+                    q.append(cur.right)
+                temp.append(cur.val)
+            if temp:
+                res.append(temp)
+        return res
