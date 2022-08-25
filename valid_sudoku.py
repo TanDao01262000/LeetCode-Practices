@@ -14,7 +14,7 @@
                 if (board[i][j] in row_set[i] or
                     board[i][j] in col_set[j] or
                     board[i][j] in block_set[(i//3, j//3)]):
-                    return False
+                    return False    
                 row_set[i].add(board[i][j])
                 col_set[j].add(board[i][j])
                 block_set[(i//3, j//3)].add(board[i][j])
