@@ -11,7 +11,6 @@ class Solution:
         
         cur = head
         pre = None
-        nxt = None
         while cur:
             nxt = cur.next
             cur.next = pre

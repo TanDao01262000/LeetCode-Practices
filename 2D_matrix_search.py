@@ -1,5 +1,3 @@
-from numpy import binary_repr
-
 
 class Solution:
     # Solution 1: iterate all rows and execute the binary search - O(n*m*log(m)) if matrix is nxm

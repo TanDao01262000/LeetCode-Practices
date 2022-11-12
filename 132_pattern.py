@@ -1,5 +1,5 @@
 # Solution 1: using stack and monotonic decreasing order
-def find123pattern(self, nums: List[int]) -> bool:
+def find123pattern(nums: list[int]) -> bool:
     stack = [] # contains a pair of value, one is the biggest value and a smallest value right before the first number, [val, min]
     cur_min = nums[0]
 
@@ -12,4 +12,4 @@ def find123pattern(self, nums: List[int]) -> bool:
         stack.append([n, cur_min])
         cur_min = min(n, cur_min)
     
-    return Falsex
+    return False
