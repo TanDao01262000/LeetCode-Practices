@@ -8,7 +8,9 @@ class Solution:
     # - O(n) time complexity and space 
     def longestConsecutive(self, nums: List[int]) -> int:
         nums_set =  set(nums)  # to avoid repeat the process when a begin of a sequence appear more than once
+        res = 0
         for num in nums_set:
+            
             max_length = 1
             if num-1 not in nums_set:
                 while num+1 in nums_set:
@@ -16,3 +18,7 @@ class Solution:
                     num += 1
                 res = max(res, max_length)
         return res
+
+sol = Solution()
+
+print(sol.longestConsecutive([1,8,7,8,9,2,6,5]))
